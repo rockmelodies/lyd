@@ -1,0 +1,211 @@
+<?php include('header.php');?>
+      <div class="clr"></div>
+  
+  <div class="content">
+    <div class="content_resize">
+      <div class="mainbar" style="width:960px;">
+        <div class="article">
+         <h2>FAQs</h2>
+         	
+		<div id="accordion">
+			<h3 class="qs">How are the Company's stock purchased and sold?</h3>
+
+			<div>Firstly open a brokerage account with RPM. See open an account to get started. All transactions involving the stock, namely, purchasing and selling shares are done at the Cyprus Stock Exchange via brokers, professional participants of the securities market, acting on your behalf and in your interests according to orders received. The company's stock has been floated for free circulation, and purchasing and selling the shares are done according to the Shareholders' wishes, in other words, a Shareholder can offer his/her shares for sale via a broker licensed at the Cyprus Stock Exchange or hold on to them in the expectation that the demand price may rise, or to receive dividends.</div>
+
+			<h3 class="qs">How Can a Brokerage Account Be Opened?</h3>
+			<div>
+			<ol>
+				<li>Firstly register with RPM and submit your registration fee of 75 Euros and KYC.</li>
+				<li>An investor should send a request for the document package, including broker's contact details and instructions on stock purchase and sale, to the following e-mail address info@rpm.com. The relevant information is also available at the website.</li>
+				<li>The investor will receive the instructions and broker's contact details. Also the method of sending the documents and address of the broker will be given</li>
+				<li>The investor should then send his/her request to the broker, in order to get the document forms completed.
+					The investor should complete all received document forms on his/her own and perform other necessary actions pursuant to the information obtained from the broker.</li>
+				<li>The investor should send all completed documents to the broker to the address given in the instructions and confirmed by the broker in correspondence.</li>
+			</ol>
+			</div>
+			<h3 class="qs">How do I pay the 75 Euro Registration fee?</h3>
+
+			<div>By Crefit Card, PayPal, Bank Transfer or Western Union.</div>
+
+			<h3 class="qs">Why do I need to Open an account with RPM?</h3>
+
+			<div>RPM is the intermediary for the buying or selling of your shares.  Once an account is opened with RPM we will provide a broker to conduct the buying and selling of your shares via the Cyprus Stock Exchange on your behalf. RPM simplifies the process by facilitating all the required elements and legal processes making it easy and straight forward for you and saving you time.</div>
+
+			<h3 class="qs">What is a KYC and why do I need it?</h3>
+
+			<div>KYC otherwise known as Know Your Customer or Client, refers to due diligence act that financial institutions and other regulated companies must perform to ascertain relevant information from their client for the purpose of doing business with them. The term is also used to refer to bank regulation which governs these activities. Know your customer processes are employed by companies of all sizes for the purpose of ensuring their proposed agents, consultants', or distributors anti -bribery compliance. And is a best practice routinely used by all good financial institutions. The information provided by clients is used to verify probity and integrity and are becoming increasingly important globally to prevent identity fraud and money laundering etc.</div>
+
+			<h3 class="qs">What information do I need to submit as KYC?</h3>
+
+			<div>Basic identity information will be required by RPM in order for your new account to become active allowing you to proceed with your buying and selling of stock.  Typical KYC documents required by RPM are any of the following:- Passport, Driving Licence, Birth Certificate, Marriage Certificate, Identity Card, Residence Visa, Utility Bills.  These must be clear scanned copies of original documents and must show your full name and current address.</div>
+
+			<h3 class="qs">My Circumstances have changed, how do I update my Address and other personal Information in my account.</h3>
+
+			<div>As an account holder/member you can view your prosile at any time and submit any changes or alterations to your personal details. Remember if your name and or address changes you will need to submit new KYC verifying the changes.</div>
+
+			<h3 class="qs">Can I open an account on behalf of someone else?</h3>
+
+			<div>No for KYC verification purposes.</div>
+
+			<h3 class="qs">Can I have multiple Accounts?</h3>
+
+			<div>Yes.</div>
+
+			<h3 class="qs">Is There a Set Maximum Time Period for Purchasing and Selling Stock after Issuing an Order to the Broker?</h3>
+
+			<div>The broker acts as an intermediary (the investor's agent acting on his/her behalf and on his/her orders) and gets the remuneration in the form of a commission. He acts in your interests. Therefore, the broker executes your order as urgently as possible. As a rule, orders are executed by the broker in order of precedence as of the moment of their arrival by fax or e-mail. In addition, in the order (application) form you can specify the period within which your order should be executed. If those are day orders, the broker will endeavor to execute them only within the day the order arrived. If the order could not be executed by the day end, it is cancelled. Should the investor fail to specify the execution period, the broker will consider such order to be a day order. Week and month orders become invalid by the end of the calendar week or month when they arrived, provided, of course, that they could not be executed by that time. Open orders, in other words, the orders that are good until cancelled, are valid until they are executed or cancelled by the investor. However, during the entire time span until the order execution the broker can from time to time ask the investor to confirm the order.</div>
+
+			<h3 class="qs">Who Will buy my Shares?</h3>
+
+			<div>No Answer as Yet</div>
+
+			<h3 class="qs">How Does RPM ensure there are ready Buyers for my shares?</h3>
+
+			<div>RPM brings together a powerful network of millions of potentially interested parties, individuals and groups via a number of social networking channels.  RPM takes care of all of the marketing and promotion which will drive traffic to a website promoting available stock for purchase.</div>
+
+			<h3 class="qs">How Many Shares Can I sell at a time?</a><h3>
+
+			<div>You can sell as many shares as the market will take at any given time. </div>
+
+
+			<h3 class="qs">Can Dividends Be Deposited to an Account of Spouses or a Foreign Currency Account Opened in a Different Name?</h3>
+
+			<div>Dividends can either be deposited to the card account, or to the account to which your remuneration for distributor's operations is deposited, or to your personal foreign currency bank account. Should you prefer to get dividends to the card/account of your spouse (under a family contract), you need to make an application for depositing the dividends to your spouse's card/account, stating the number and owner, and send it to the Company's settlement department. The personal bank account should be opened in the Shareholders beneficiary's name.</div>
+
+			<h3 class="qs">What Happens to My Account if I die?</h3>
+
+			<div>If you have not made provision for the gifting of your account, and as a result of your death your account is idle for a period of one year, your account will be deemed inactive and will be closed. </div>
+
+			<h3 class="qs">Can I Make a Gift of the Company's Stock and to Whom?</h3>
+
+			<div>Yes, you can, but with certain limitations. VIPGPL is incorporated in Cyprus and is an International company. The Company's shares, pursuant to the Cyprus law, are dematerialized, in other words, they are undocumented securities registered with the Cyprus Central Depository. They are listed in the Cyprus Central Securities Register, and also circulated within the Cyprus Stock Exchange. The company's operations as well as the matters of origin, change and cessation of the right of ownership of the stock are regulated by the Cyprus law. Pursuant to the Cyprus law, a shareholder is entitled to transfer shares as a gift to any party, by undertaking the following actions:
+			<ol>
+				<li>The grantor and the donator should already have brokerage accounts open. It is necessary to complete form No 13, as approved by the Cyprus Stock Exchange, which can be obtained from the Shareholder Department.</li>
+				<li>You should sign a letter notifying the Cyprus Stock Exchange on the stock transfer without material benefits for the parties.</li>
+				<li>It is necessary to draw up the deed of the gift concerning the stock transfer.
+				<li>The documents are to be completed and signed personally by the shareholder wishing to transfer the stock.</li>
+				<li>All signatures should be notarized.</li>
+				<li>The forms should be legalized, in other words, they should be translated into English and the apostil should be affixed;</li>
+				<li>After you perform the above actions the completed forms should be sent to the Cyprus Stock Exchange, and the number of shares specified in the form will be transferred to the donator's name.</li>
+			</ol>
+			</div>
+			<h3 class="qs">Can I Bequeath the Company's Stock?</h3>
+
+			<div>You can bequeath the Company's stock by making your will and meeting all the requirements set by the Russian law. Pursuant to Clause 1 Article 1224 of the RF Civil Code, inheritance matters are determined by the laws of the country being the last domicile of the testator, in other words, the inheritance procedure is guided by Section 5 of the RF Civil Code and the laws passed under this. And the origin and cessation of the right of ownership and other interests in the estate, pursuant to Clause 1 Article 1206 of the RF Civil Code, are governed by the laws of the country where the estate as located at the moment of the event or other circumstance giving grounds to the origin or cessation of the right of ownership and other interests in the estate, namely, by the laws of Cyprus. Therefore, for accepting the inherited stock the inheritor should make an application to a notary at the location of the inheritance opening on accepting the inheritance or an application for issuing a certificate of the right to inheritance. For issuing the certificate of the right to inheritance the notary will check the contents and the location of the estate by sending a query to the Company for an excerpt from the register. After obtaining the certificate of the right to inheritance the inheritor transfers the right of ownership to the securities by completing, signing, translating into English and having the apostil affixed to the forms approved by the Cyprus Stock Exchange and sending those forms to Cyprus. You can get a detailed consultation from the Shareholder Department. For effecting transactions with the inherited stock the inheritor should open a brokerage account following all the procedures required for this.</div>
+
+			<h3 class="qs">How Much are my Stocks worth?</h3>
+
+			<div>Cxxx</div>
+
+			<h3 class="qs">What is the Cyprus Securities Exchange?</h3>
+
+			<div>The Cyprus Stock Exchange also known as the Cyprus Securities Depository is a stock exchange, located in Nicosia, Cyprus. Established under Cyprus Securitie and Stock Exchange Law which provides for the development of the securities market in Cyprus and for the establishment and operation of the Cyprus Stock Exchange, passed by the house of representatives in 1993.  The exchange has normal trading sessions Monday through to Friday from 10.00am until 5.00pm. Excluding Saturdays and Sundays and holidays declaired by the exchange usually in advance. The Cyprus Stock Exchange CSE, allows private or public companies to list their bonds on the Emerging Companies Market ECM and for public companies to list their shares on the ECM. In both cases the listing of shares and bonds on the CSE will also provide the ISIN code and have the prices published live via Bloomberg and Reuters terminals as both are official financial dta vendors.</div>
+
+			<h3 class="qs">How Can I trade My Shares without a Paper Certificate?</h3>
+
+			<div>Good Question</div>
+
+			<h3 class="qs">Does the Date of Acquiring the Stock Affect the Amount of Dividends Payable on One Company's Share?</h3>
+
+			<div>No, the acquisition date in no way affects the amount of calculated and paid dividends.</div>
+
+			<h3 class="qs">How do I receive My Shares Electronically?</h3>
+
+			<div>No idea xxx</div>
+
+			<h3 class="qs">Should a Brokerage Account Be Opened for Getting Dividends on the Stock?</h3>
+
+			<div>No, it should not. However, you do need a brokerage account, should you wish to purchase or sell the stock. The brokerage account existence in no way affects getting dividends.</div>
+
+			<h3 class="qs">Is It True that without Opening Brokerage Account Dividends Will Be Smaller?</h3>
+
+			<div>No, it is not true. The amount of dividends for any share is identical, regardless of having or lacking a brokerage account.</div>
+
+
+
+			<h3 class="qs">The Broker Is Slow in Executing Stock-Selling Orders</h3>
+
+			<div>Due to a small number of transactions with VIPGPL stock CISCO brokerage company takes up the stock selling orders pursuant to the method applicable in this case - when the order received by the broker first, is executed first. It means that orders are executed in the order of precedence on the date of the broker getting sell orders.</div>
+			
+
+			<h3 class="qs">How Much Do Broker's Services on Transactions Cost? How Are Brokerage Services Paid for: a Percentage of the Transaction Amount or a Flat Fee?</h3>
+
+			<div>See Tarif or Fee Schedule</div>
+
+			<h3 class="qs">How To Calculate Correctly Dividends Amount for the Shares in Possession? Will the Amount of Dividends Paid Affect the Shares Price at the Exchange?</h3>
+
+			<div>In order to calculate the dividends amount it is necessary to multiply the number of shares you hold by the amount of dividend for one share as announced and approved by the general shareholder's meeting of Vision International People Group pl. The stock exchange practice shows that the fact of dividends payment does not significantly affect the stock market price.</div>
+
+			<h3 class="qs">What Documents Confirm the Possession by the Company's Shareholder of a Certain Number of Shares?</h3>
+
+			<div>The shareholders' register of STC is kept in the undocumented form. In order to get the confirmation from the shareholders' register one should send a request to the broker (see the broker's contact data below) or to the Cyprus Stock Exchange Central Depository.</div>
+
+			<h3 class="qs">How To Sell a Portion of My Stock? How To Calculate the Number of Shares To Be Sold in Order to Get a Certain Amount of Money, Say, 1,000 USD?</h3>
+
+			<div>To sell all or some shares you hold you should issue a special order to the broker. It is to reflect the main parameters of the transaction: what number of shares and at what price you wish to sell. To determine the proceeds you plan to get from the stock sale, you need to multiply the number of shares sold by their current price stated at the Cyprus Stock Exchange website. You should keep in mind that the brokerage commission would be deducted from the amount.</div>
+
+			<h3 class="qs">Should a Shareholder Holding the Stock as a Result of Conversion Open a Brokerage Account with the Stock Exchange?</h3>
+
+			<div>No, he/she should not. A brokerage account is required only for purchasing, selling or otherwise disposing of the stock. Go to open account in order to open a brokerage account with RPM. If you do not purchase new shares or sell the shares you hold, you do not need a brokerage account.</div>
+
+			<h3 class="qs">Where and How Can I See the Current Price of the Company's Stock?</h3>
+
+			<div>At the Cyprus Stock Exchange website at
+			http://www.cse.com.cy/en/default.asp
+			You can see the current stock price as well as the quotation history. In order to define the time interval for which you want to see the quotation history you should select the relevant value to the right of Interval and click on Chart.</div>
+
+			<h3 class="qs">Now I have an Brokerage Account with RPM, what happens next ?</h3>
+
+			<div>xxx</div>
+
+			<h3 class="qs">Now I have a Brokerage Account with RPM, what other services and charges are there?</h3>
+
+			<div>Xxx</div>
+
+			<h3 class="qs">Will the Company's Stock Prices Increase?</h3>
+
+			<div>The stock current and future price is determined by the stock market, therefore given the current situation it would be quite difficult to predict how the prices will change. You can review the changing prices of stock on the CSE or via Bloomberg and Reuters. </div>
+
+			<h3 class="qs">Can I Transfer Money for Purchasing Additional Stock through Different Banks?</h3>
+
+			<div>Yes, you can. Money transfers are possible with any banks, but you should keep in mind that not all banks have the experience of such transfers. Kindly contact one of our advisors for further information.</div>
+
+			<h3 class="qs">I have paid my registration fee and now I wish to Cancel, Can I cancel?</h3>
+
+			<div>Yes you can cancel at any time if you wish.  Please See Our Refund Policy with regards to any monies that may be due to be returned to you as a result of cancellation.</div>
+
+			<h3 class="qs">I have paid my registration fee and I have submitted my KYC, now I have changed my mind and wish to cancel. Can I cancel?</h3>
+
+			<div>Yes you have a right to change your mind at anytime, however, once you have submitted your KYC and we have begun our KYC controls and provesses you will not be entitled to a refund.  Your account will remain un active until you decided to proceed further at another time.</div>
+
+			<h3 class="qs">How Long Does My Account Remain Inactive?</h3>
+
+			<div>Your account will be allowed to stay inactive for a period of no more than one year before it is deemed necessary to deactivate. After a peroiod of one year the account will be loced by RPM. Any funds held in that account will automatically be recovered by RPM, see refund policy.</div>
+
+		</div>
+
+			
+			
+          <div class="clr"></div>
+        </div>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  
+   <script>
+  $(function() {
+    var icons = {
+      header: "faq-close",
+      activeHeader: "faq-open"
+    };
+    $( "#accordion" ).accordion({
+      icons: icons,
+	  collapsible: true,
+	  heightStyle: "content",
+	  active: false
+    });
+   
+  });
+  </script>
+  <?php include('footer.php');?>

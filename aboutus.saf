@@ -1,0 +1,23 @@
+<?php include('header.php');?>
+      <div class="clr"></div>
+  
+  <div class="content">
+    <div class="content_resize">
+      <div class="mainbar" style="width:960px;">
+        <div class="article">
+         <h2>About RadproMarkets (RpM)</h2>
+		 
+		<p>RadproMarkets is brand of Eurivex Limited, a Cyprus Investment firm, authorised and regulated by the Cyprus Securities Exchange Commission (CySEC) License number 114/10. Company Reg. HE 255430 and is Headquartered in Cyprus, EU. The company, as a brand of Eurivex Limited, specialises in online trading and investments across global markets to both private investors and individuals. As such RadproMarkets is licensed to trade capital markets, offer portfolio management and hold client funds in safe custody and does so with the full support of Eurivex Limited.</p>
+		<p>From the outset RpM has emphasised technology as a vital element for being competitive in the online trading industry. With clients worldwide, RpM is recognised for excellence in service and technology. Safeguarding client information and securely controlling, executing and managing real-time internal systems are of utmost importance to RpM. A significant team of experienced IT professionals works diligently to firmly secure all of RpM's information and operating systems.</p>
+		<p>Newly inaugurated in 2013 as a new brand of Eurivex Limited, RadproMarkets is a best practice facilitator in the global capital markets aggregating liquidity, offering access to global financial exchanges and providing its fledgling suite of products and platforms to private clients around the world. RadproMarkets aims to bring the contemporary investor selected stocks from some of the best emerging markets.</p>
+		<p>RadproMarkets operates in line with EU's and MiFID's rules and regulations and is in compliance with the OECD and EU's anti money-laundering and KYC directives. RpM applies partially the Corporate Governance Code and has 2 Executive Directors and 2 non- Executive Directors.</p>
+
+         
+          
+          <div class="clr"></div>
+        </div>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <?php include('footer.php');?>

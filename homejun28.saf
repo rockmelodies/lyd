@@ -1,0 +1,72 @@
+<?php include('header.php');?>
+      <div class="clr"></div>
+  
+  <div class="content">
+    <div class="content_resize">
+      <div class="mainbar" style="width:590px;">
+        <div class="article">
+         <h2>Welcome to RadproMarkets</h2>
+         <p>RadProMarkets is a new trading solution for the contemporary investor looking to trade selected stocks across world markets.  A brand of Eurivex Limited, an established and regulated investment firm, head quartered in Cyprus, EU, Eurivex is licensed to trade in capital markets, offer portfolio management and hold client money. RpM provides a unique platform that brings both buyers and sellers together in an environment where there is appetite for investment and opportunity to buy and sell in a safe controlled process. </p>
+
+<p>We trust you will find this website easy to navigate and the content adds value to your investment strategy.  You will find plenty of support information to guide you through the process of buying and selling stock, in addition to varied consumer protection information.</p>
+
+<p>This website also offers you immediate access to selected Stocks on the Cyprus Stock Exchange (CSE) and members who wish to buy and sell those selected stocks. Once your account is open you will be able to trade stocks on the Cyprus Stock Exchange. Simply register and open an account with RpM and Eurivex and you will be ready to start.</p>
+
+    <div class="content_resize">
+      <div class="mainbar" style="width:920px;">
+
+         <h2>Trading Stocks online with RadproMarkets</h2>
+
+<p>If you have ever thought of trading Stocks online, getting started is easier than ever with RadproMarkets. Open a live account today for just 75 Euros and you can start trading our selected stocks form all over the world. Whether you are interested in Stocks from the US, Europe or Asia, RadproMarkets makes it simple and affordable to create and manage Stock portfolio you've always wanted, with a single versatile account, regardless of whether you are buying or selling. Moreover, by opening an account with RpM, you get access to our extensive network of investors. Make the most of your opportunity. Start today!</p>
+
+</div>
+</div>
+	</div>
+            
+       
+          <div class="clr"></div>
+
+		
+        </div>
+        <img src="images/Postit3.png" style="float:right; margin:70px 18px 0 0" />
+      </div>
+      <div class="clr"></div>
+      <div class="content-button">          
+            <div class="left-button">
+            	<a href="#"><img src="images/button1.jpg" class="btn-img" /></a>
+				<div class="btn-main">	                
+                        <div class="btn-title">New Trading Solution</div>
+                        <div class="btn-content">RadproMarkets is a new trading solution for the contemporary investor looking to trade selected stocks across world markets.<br />
+                        <br />
+<ul>
+<li>Operating through a Regulated EU Firm</li>
+<li>MiFID Compliant</li>
+<li>100% Tranparency</li>
+<li>Professional Safe Secure</li>
+</ul>
+<br />
+For more details contact us at: <a href="mailto:info@radpromarkets.com">info@radpromarkets.com</a>
+                                               
+                        </div>
+                </div>
+            </div>
+            
+            <div class="right-button">
+            		<a href="#"><img src="images/button2.jpg"  class="btn-img"/></a>
+                    <div class="btn-main">	                
+                        <div class="btn-title">A consumer’s guide to MiFID</div>
+                        <div class="btn-content">Investing in financial products?<br /> What is MiFID? <br /> and how does it affect you? <br /> 
+<a href="guide-to-MiFD.php" class="more-link"> Read more....</a> 
+                        <br /><br />
+                        
+                        
+                        
+                        </div>
+                </div>
+            </div>
+      </div><!---class button end--->
+      
+           <div class="clr"></div>
+    </div>
+ 
+  <?php include('footer.php');?>

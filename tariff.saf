@@ -1,0 +1,98 @@
+<?php include('header.php');?>
+      <div class="clr"></div>
+  
+  <div class="content">
+    <div class="content_resize">
+      <div class="mainbar" style="width:940px;">
+        <div class="article">
+         <h2>Fee Schedule / Tariff</h2><br>
+         	
+            <p>
+            	The following page contains important information regarding the fees/expenses associated with account opening, account maintenance and trade execution. A detailed breakdown of the fees summarized below can be provided upon request.
+            </p>
+            <table align="center" width="90%" border="1" bordercolor="#3367CD"  cellspacing="0" cellpadding="2">
+				<tr bgcolor="#b6ce20">
+                	<td width="25%" ><strong style="font-size:14px">1. Brokerage Fees</strong> </td>
+                    <td width="25%"></td>
+                    <td width="25%"></td>
+                    <td width="25%"> </td>
+                 </tr> 
+                 <tr>
+                	<td width="25%"><strong>Description: </strong> </td>
+                    <td width="25%" align="center"> <strong>CSE & ASE Equities </strong> </td>
+                    <td width="25%" align="center">  <strong>Global Equities</strong></td>
+                    <td width="25%" align="center"><strong>Vienna Stock Ex-change</strong> </td>
+                 </tr> 
+                 <tr>
+                	<td width="25%">Commission: </td>
+                    <td width="25%" align="center">2% </td>
+                    <td width="25%" align="center"> 0.75%</td>
+                    <td width="25%" align="center">0.40% </td>
+                 </tr> 
+                 <tr>
+                	<td width="25%">Transaction Fees*:</td>
+                    <td width="25%" align="center">N/A </td>
+                    <td width="25%" align="center">N/A </td>
+                    <td width="25%" align="center"> N/A</td>
+                 </tr> 
+                 <tr>
+                	<td width="25%" colspan="4">**For transactions in currencies other than EUR, the equivalent amounts will be charged.
+Foreign Stock Exchanges fees and taxes are NOT included in above transaction costs and are charged additionally.
+</br>
+*Stock Exchange and Central Depository Fees are determined by the each relevant Stock Exchange and Central Depository. Each client is charged according to the latest fee policy of each Stock Exchange and Central Depository respectively.
+</td>
+                    
+                 </tr>   
+			</table><br /><br />
+            <!-------Second table------>
+             <table align="center" width="90%" border="1" bordercolor="#b6ce20"  cellspacing="0" cellpadding="2">
+				<tr bgcolor="#3367CD">
+                	<td width="25%" ><strong style="font-size:14px">2. Custody Fees</strong> </td>
+                    <td width="25%"></td>
+                    <td width="25%"></td>
+                    <td width="25%"> </td>
+                 </tr> 
+                 <tr>
+                	<td width="25%"><strong>Description: </strong> </td>
+                    <td width="25%" align="center"> <strong>CSE & ASE Equities </strong> </td>
+                    <td width="25%" align="center">  <strong>Global Equities</strong></td>
+                    <td width="25%" align="center"><strong>Vienna Stock Ex-change</strong> </td>
+                 </tr> 
+                 <tr>
+                	<td width="25%">Settlement Fees**:  </td>
+                    <td width="25%" align="center">€ 0 </td>
+                    <td width="25%" align="center">€ 30</td>
+                    <td width="25%" align="center">N/A </td>
+                 </tr> 
+                 <tr>
+                	<td width="25%">Custody Fees:</td>
+                    <td width="25%" align="center">0.00% </td>
+                    <td width="25%" align="center">0.05% p.a.</td>
+                    <td width="25%" align="center"> 0.05% p.a.</td>
+                 </tr> 
+                 <tr>
+                	<td width="25%" colspan="4">**For transactions in currencies other than EUR, the equivalent amounts will be charged.
+The above custody fees apply for the following countries: USA, Canada, Belgium, France, Germany, Denmark, Switzerland, UK, Ireland, Spain, Italy, Norway, Holland, Portugal, Sweden, and Finland.
+
+</td>
+                    
+                 </tr>   
+			</table>
+            <br /><br />
+            <p>
+            Sales tax is determined by the appropriate authorities of the country where each exchange is registered and is could be imposed on sales of equities, warrants, rights, corporate bonds etc. Such fees charged by the relevant authorities are passed on to the client.
+            </p>
+            <p>
+            Clients acknowledge and accept that the Company may have to pay fees to third parties who act as intermediaries for transactions in Financial Instruments.
+            </p>
+            <p>
+            The Company reserves the right to amend at its discretion all such commission, costs and financing fees and proper information on such amendments will be available on the main website which the Client must review during the period the Client is dealing with the Company and especially before placing any orders with the Company. Placing an order is deemed as consent to any changes on the Company webpage each time.
+            </p>
+            
+          <div class="clr"></div>
+        </div>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <?php include('footer.php');?>

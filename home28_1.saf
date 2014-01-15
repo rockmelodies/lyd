@@ -1,0 +1,31 @@
+<?php include('header.php');?>
+      <div class="clr"></div>
+  
+  <div class="content">
+    <div class="content_resize">
+      <div class="mainbar" style="width:500px;">
+        <div class="article">
+         <h2>Welcome to RadproMarkets</h2>
+         <p>RadproMarkets can help you open an account to get online and be able to trade stocks with a reputable firm quickly and easily. Let us help you to open an account today for just 75 Euros.</p>
+
+<p>Make the most of your opportunity. Start today!</p>
+
+<p></p>
+
+
+	</div>
+            
+       
+          <div class="clr"></div>
+
+		
+        </div>
+        <img src="images/Postit3.png" style="float:right; margin:70px 18px 0 0" />
+      </div>
+      <div class="clr"></div>
+
+
+
+    </div>
+ 
+  <?php include('footer.php');?>

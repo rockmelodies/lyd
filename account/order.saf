@@ -1,0 +1,435 @@
+<?php
+ob_start();
+
+require_once('include/entryPoint.php');
+
+isLoggedin();
+
+$msg = '';
+
+if(isset($_POST['submit']))
+
+{
+
+	$send_order_parameters = array(
+         "session" => $_SESSION['session'],
+         "name_value_list" => array(
+             "type" => $_POST['type'],
+             "quantity"  => $_POST['quantity'],
+			 "person"  => $_SESSION['full_name'],
+			 "account_number" => $_SESSION['username'],
+			 "user_email" => $_SESSION['user_email'],
+			 "user_id" => $_SESSION['user_id'],
+			 "order_price" => $_POST['order_price'],
+			),
+		);
+
+	$send_order_results = doRESTCALL($crm_url, "send_order", $send_order_parameters);
+	
+	if(isset($send_order_results->message)){
+		$success = '<span class="success">Your Order has been placed.</span>';
+		$_SESSION['success'] = $success;
+	}else{
+		$error = '<span class="error">Sorry. Please try to place the order again.</span>';
+		$_SESSION['error'] = $error;
+	}
+	
+	
+	redirect('order.php');
+}
+
+$get_price_log_parameters = array(
+	 'session' => $_SESSION['session'],
+	 /*'module_name' => 'rad_PriceLog',
+	 'query' => '',
+	 'order_by' => 'date_entered DESC',
+	 'offset' => '',
+	 'select_fields' => array(
+		'name',
+		'price',
+		'date_entered',
+	 ),
+	 'link_name_to_fields_array ' => array(),
+	 'max_results' => 1,*/
+);
+$get_price_log_result = doRESTCALL($crm_url, "get_latest_price", $get_price_log_parameters);
+//echo '<pre>'; print_r($get_entries_result); echo '</pre>'; die;
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<link href="stylesheet/main.css" rel="stylesheet" type="text/css" />
+
+
+
+<title>Order Form - RadproMarkets</title>
+
+<script src="js/jquery.js" type="text/javascript"></script>
+
+<script src="js/jquery.validate.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+$().ready(function() {
+
+	$("#order").validate({
+
+		rules: {
+			quantity: "required",
+			//name: "required",
+		},
+		messages: {
+			quantity: "Please enter Quantity.",
+			//name: "Please enter name of the share.",
+		}
+
+	});
+
+});
+
+function changePrice(){
+	var symbol = document.order.symbol.value;
+	var quantity = parseInt(document.order.quantity.value);
+	
+	if(symbol != '' && typeof symbol != 'undefined' && quantity > 0 ){
+		var target_price = document.getElementById('price_'+symbol).value;
+		var order_price = target_price * quantity;
+		document.getElementById('order_price_div').innerHTML = parseFloat(order_price);
+		document.getElementById('order_price').value = parseFloat(order_price);
+	}else{
+		document.order.quantity.value = 0;
+		document.getElementById('order_price_div').innerHTML = parseFloat(0.00);
+		document.getElementById('order_price').value = parseFloat(0.00);
+	}
+}
+</script>
+
+</head>
+
+
+
+<body>
+
+
+
+<div id="container">
+
+
+
+<!--header start-->
+
+<?php include_once "header.php"; ?>
+
+<!--end header-->
+
+
+
+<!--start main-->
+<div class="clr"></div>
+  
+  <div class="content">
+    <!--<div class="content-back2"></div>-->
+  <div class="logo-ex"></div> <!------eurix logo----------->
+    <div class="content_resize" >
+      <div class="mainbar" style="width:800px;float:none;margin:0 auto;color:#3367CD;">
+        <div class="article" >
+      
+      <div style="clear:both">&nbsp;</div>
+
+<div class="custom" style="border:1px solid #A1AEAF; box-shadow:2px 2px 2px 2px #cccccc; border-radius:9px;background:#3367cd;margin-top:25px;overflow:hidden;color:#fff; ">
+ <div style="background:#b6ce20;height: 85px;text-align:center;margin-top: -50px;padding-bottom: 27px;">
+         <div id="subheader">ORDER FORM</div><!--<img src="images/order_form.png" style="margin-top: 10%;"/>-->
+         </div>
+ 
+ <!-----------oredre page start------------->
+ <div class="order-page">
+ <form name="order" id="order" method="post" action="">
+ 	<div class="table-wrap" style="width:370px !important; float:left; margin-left:15px">
+    		<div class="table-head">CYPRUS STOCK EXCHANGE <br />Emerging Companies Markets</div>
+            <div style="clear:both"></div>
+            
+            <table width="100%" cellpadding="5" cellspacing="0">
+            		<tr>
+                        <th width="15%" align="center">Symbol</th>
+                        <th  align="center">Company Name</th>
+                        <th width="25%" align="center">Yesterdays <br /> closing price</th>
+                    </tr>
+                    <tr>
+                        <td align="center">GG</td>
+                        <td  align="left" >Company Name 1</td>
+                        <td align="right"><?php if(!empty($get_price_log_result->price_log->GG->price)){ echo $price_GG = $get_price_log_result->price_log->GG->price; }else{ echo $price_GG = '0.0000'; } ?>
+                        <input type="hidden" name="price_GG" id="price_GG" value="<?php echo $price_GG ?>" />
+                        </td>
+                    </tr>
+                     <tr>
+                        <td align="center">Lawn</td>
+                        <td align="left">Company Name 1</td>
+                        <td align="right"><?php if(!empty($get_price_log_result->price_log->Lawn->price)){ echo $price_Lawn = $get_price_log_result->price_log->Lawn->price; }else{ echo $price_Lawn = '0.0000'; } ?>
+                        <input type="hidden" name="price_Lawn" id="price_Lawn" value="<?php echo $price_Lawn ?>" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">GKAZG</td>
+                        <td align="left">Company Name 1</td>
+                        <td align="right"><?php if(!empty($get_price_log_result->price_log->GKAZG->price)){ echo $price_GKAZG = $get_price_log_result->price_log->GKAZG->price; }else{ echo $price_GKAZG = '0.0000'; } ?>
+                        <input type="hidden" name="price_GKAZG" id="price_GKAZG" value="<?php echo $price_GKAZG ?>" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">Insists</td>
+                        <td align="left">Company Name 1</td>
+                        <td align="right"><?php if(!empty($get_price_log_result->price_log->Insists->price)){ echo $price_Insists = $get_price_log_result->price_log->Insists->price; }else{ echo $price_Insists = '0.0000'; } ?>
+                        <input type="hidden" name="price_Insists" id="price_Insists" value="<?php echo $price_Insists ?>" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">ECHMI</td>
+                        <td align="left">Company Name 1</td>
+                        <td align="right"><?php if(!empty($get_price_log_result->price_log->ECHMI->price)){ echo $price_ECHMI = $get_price_log_result->price_log->ECHMI->price; }else{ echo $price_ECHMI = '0.0000'; } ?>
+                        <input type="hidden" name="price_ECHMI" id="price_ECHMI" value="<?php echo $price_ECHMI ?>" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">EHEA</td>
+                        <td align="left">Company Name 1</td>
+                        <td align="right"><?php if(!empty($get_price_log_result->price_log->EHEA->price)){ echo $price_EHEA = $get_price_log_result->price_log->EHEA->price; }else{ echo $price_EHEA = '0.0000'; } ?>
+                        <input type="hidden" name="price_EHEA" id="price_EHEA" value="<?php echo $price_EHEA ?>" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">INLE</td>
+                        <td align="left">Company Name 1</td>
+                        <td align="right"><?php if(!empty($get_price_log_result->price_log->INLE->price)){ echo $price_INLE = $get_price_log_result->price_log->INLE->price; }else{ echo $price_INLE = '0.0000'; } ?>
+                        <input type="hidden" name="price_INLE" id="price_INLE" value="<?php echo $price_INLE ?>" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">INLI</td>
+                        <td align="left">Company Name 1</td>
+                        <td align="right"><?php if(!empty($get_price_log_result->price_log->INLI->price)){ echo $price_INLI = $get_price_log_result->price_log->INLI->price; }else{ echo $price_INLI = '0.0000'; } ?>
+                        <input type="hidden" name="price_INLI" id="price_INLI" value="<?php echo $price_INLI ?>" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">ITTL</td>
+                        <td align="left">Company Name 1</td>
+                        <td align="right"><?php if(!empty($get_price_log_result->price_log->ITTL->price)){ echo $price_ITTL = $get_price_log_result->price_log->ITTL->price; }else{ echo $price_ITTL = '0.0000'; } ?>
+                        <input type="hidden" name="price_ITTL" id="price_ITTL" value="<?php echo $price_ITTL ?>" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">KERV</td>
+                        <td align="left">Company Name 1</td>
+                        <td align="right"><?php if(!empty($get_price_log_result->price_log->KERV->price)){ echo $price_KERV = $get_price_log_result->price_log->KERV->price; }else{ echo $price_KERV = '0.0000'; } ?>
+                        <input type="hidden" name="price_KERV" id="price_KERV" value="<?php echo $price_KERV ?>" />
+                        </td>
+                    </tr>  
+                     <tr>
+                        <td align="center">KOAM</td>
+                        <td align="left">Company Name 1</td>
+                        <td align="right"><?php if(!empty($get_price_log_result->price_log->KOAM->price)){ echo $price_KOAM = $get_price_log_result->price_log->KOAM->price; }else{ echo $price_KOAM = '0.0000'; } ?>
+                        <input type="hidden" name="price_KOAM" id="price_KOAM" value="<?php echo $price_KOAM ?>" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">LAKE</td>
+                        <td align="left">Company Name 1</td>
+                        <td align="right"><?php if(!empty($get_price_log_result->price_log->LAKE->price)){ echo $price_LAKE = $get_price_log_result->price_log->LAKE->price; }else{ echo $price_LAKE = '0.0000'; } ?>
+                        <input type="hidden" name="price_LAKE" id="price_LAKE" value="<?php echo $price_LAKE ?>" />
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td align="center">Bruce</td>
+                        <td align="left">Company Name 1</td>
+                        <td align="right"><?php if(!empty($get_price_log_result->price_log->Bruce->price)){ echo $price_Bruce = $get_price_log_result->price_log->Bruce->price; }else{ echo $price_Bruce = '0.0000'; } ?>
+                        <input type="hidden" name="price_Bruce" id="price_Bruce" value="<?php echo $price_Bruce ?>" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">ORCA</td>
+                        <td align="left">Company Name 1</td>
+                        <td align="right"><?php if(!empty($get_price_log_result->price_log->ORCA->price)){ echo $price_ORCA = $get_price_log_result->price_log->ORCA->price; }else{ echo $price_ORCA = '0.0000'; } ?>
+                        <input type="hidden" name="price_ORCA" id="price_ORCA" value="<?php echo $price_ORCA ?>" />
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td align="center">PKSG</td>
+                        <td align="left">Company Name 1</td>
+                        <td align="right"><?php if(!empty($get_price_log_result->price_log->PKSG->price)){ echo $price_PKSG = $get_price_log_result->price_log->PKSG->price; }else{ echo $price_PKSG = '0.0000'; } ?>
+                        <input type="hidden" name="price_PKSG" id="price_PKSG" value="<?php echo $price_PKSG ?>" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">Rhubarb</td>
+                        <td align="left">Company Name 1</td>
+                        <td align="right"><?php if(!empty($get_price_log_result->price_log->Rhubarb->price)){ echo $price_Rhubarb = $get_price_log_result->price_log->Rhubarb->price; }else{ echo $price_Rhubarb = '0.0000'; } ?>
+                        <input type="hidden" name="price_Rhubarb" id="price_Rhubarb" value="<?php echo $price_Rhubarb ?>" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">STSI</td>
+                        <td align="left">Company Name 1</td>
+                        <td align="right"><?php if(!empty($get_price_log_result->price_log->STSI->price)){ echo $price_STSI = $get_price_log_result->price_log->STSI->price; }else{ echo $price_STSI = '0.0000'; } ?>
+                        <input type="hidden" name="price_STSI" id="price_STSI" value="<?php echo $price_STSI ?>" />
+                        </td>
+                    </tr>
+                           
+            </table>
+    </div><!-----table first end---->
+    <div class="table-wrap " style="width:340px !important; float:left;margin-left: 20px;">
+    		<div class="table-head" style="margin-bottom:32px;">ACCOUNT DETAILS</div>
+            
+            <table width="32%" cellpadding="5" cellspacing="0" style="float:left;margin-left:80px">
+            		<tr>
+                        <th width="50%" align="center">Symbol</th>
+                        <th  align="center">Qty</th>
+                        
+                    </tr>
+                    <tr>
+                        <td align="center">GG</td>
+                        <td align="right">100</td>
+                      
+                    </tr>
+                     <tr>
+                        <td align="center">Lawn</td>
+                        <td align="right">275</td>
+                        
+                    </tr>         
+            </table>
+             <table width="35%" cellpadding="5" cellspacing="0" style="float:right;margin-right:-5px;">
+            		<tr>
+                        <th width="15%" align="center">Account Balance</th>
+                    </tr>
+                    <tr>
+                      <td align="right">0</td>
+                      </tr>
+                            
+            </table>
+    
+    </div><!-----table second  end---->
+    <div style="clear:both"></div>
+    <div class="table-wrap" style="440px">
+    
+    	<div class="table-head">PLACE AN ORDER</div>
+            <table width="100%" cellpadding="5" cellspacing="0">
+            		<?php if(isset($_SESSION['error'])){ ?>
+
+                    <tr>
+                    
+                    <td colspan="5" align="center"><?php  echo $_SESSION['error']; unset($_SESSION['error']); ?></td>
+                    
+                    </tr>
+                    
+                    <?php } ?>	
+        
+                    <?php if(isset($_SESSION['success'])){ ?>
+        
+                    <tr>
+                    
+                    <th colspan="5" align="center"><?php  echo $_SESSION['success']; unset($_SESSION['success']); ?></th>
+                    
+                    </tr>
+                    
+                    <?php } ?>
+                    
+            		<tr>
+                        <th width="15%" align="center">Buy/Sell</th>
+                        <th width="15%"  align="center">Symbol</th>
+                        <th  width="" align="center">Quantity</th>
+                        <th width="" align="center">Approx Value</th>
+                        <th width="" align="center">Good until</th>
+                    </tr>
+                    <tr>
+                        <td>
+                        	<select name="type" id="type">
+                                 	<option value="Buy"> Buy</option>
+                                    <option value="Sell"> Sell</option>
+                             </select>       
+                        		 
+                         </td>
+                        <td>
+                        	<select name="symbol" id="symbol" onchange="changePrice();">
+                                 	<option value="GG"> GG</option>
+                                    <option value="Lawn"> Lawn</option>
+                                    <option value="GKAZG"> GKAZG</option>
+                                    <option value="Insists"> Insists</option>
+                                    <option value="ECHMI"> ECHMI</option>
+                                    <option value="EHEA"> EHEA</option>
+                                    
+                                    <option value="INLE"> INLE</option>
+                                    <option value="GG"> INLI</option>
+                                    <option value="ITTL"> ITTL</option>
+                                    <option value="KERV"> KERV</option>
+                                    <option value="KOAM"> KOAM</option>
+                                    <option value="LAKE"> LAKE</option>
+                                    <option value="Bruce"> Bruce</option>
+                                    <option value="ORCA"> ORCA</option>
+                                    <option value="PKSG"> PKSG</option>
+                                    <option value="Rhubarb"> Rhubarb</option>
+                                    <option value="STSI"> STSI</option>
+                                 </select>
+                        </td>
+                        <td><input type="text" name="quantity" id="quantity"  style="width:44px"  onBlur="changePrice();" />
+                        <input type="hidden" name="order_price" id="order_price" value="0.00" /> </td>
+                        <td><div id="order_price_div"></div></td>
+                        <td>
+                        	<select name="">
+                                 	<option value="GG"> End of Day</option>
+                                    <option value="Lawn"> End of Month</option>
+                                    <option value="GKAZG">Until Cancelled</option>
+                             </select>       
+                        </td>
+                   </tr>
+                   <tr>
+                   		<td colspan="5"><input type="submit" name="submit" id="submit" class="login"  /></td>
+                   </tr>
+            </table>
+    		
+    </div><!-----table third end---->
+ 
+ </div>
+ 
+  <!-----------oredre page end------------->
+ 
+ 
+ 
+ 
+ </form>
+</div>
+            
+       
+          <div class="clr"></div>
+        </div>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+
+<!--end main-->
+
+
+<!--start footer-->
+
+<div id="footer">
+
+	<?php include_once "footer.php"; ?>
+
+</div>
+
+<!--end footer-->
+
+</div>
+
+
+
+</body>
+
+</html>
+
+<?php ob_flush(); ?>

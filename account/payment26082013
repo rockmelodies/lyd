@@ -1,0 +1,117 @@
+<?php
+ob_start();
+require_once('include/entryPoint.php');
+isLoggedin();
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="stylesheet/main.css" rel="stylesheet" type="text/css" />
+<title>LydorMarkets</title>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/jquery.validate.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+	$('#payment_form').validationEngine();
+});
+</script>
+</head>
+
+<body>
+
+<div id="container">
+
+<!--header start-->
+<?php include_once "eurivex_header.php"; ?>
+<!--end header-->
+
+<!--start main-->
+<div class="clr"></div>
+  
+  <div class="content">
+	  <!--<div class="logo-ex"></div>--> <!------eurix logo----------->
+    <!--<div class="content-back2"></div>-->
+  
+    <div class="content_resize" >
+      <div class="mainbar" style="width:842px;float:none;margin:0 auto;color:#3367CD;">
+        <div class="article" >
+             <div style="clear:both"></div>
+        <div class="custom" style="border:1px solid #A1AEAF; box-shadow:2px 2px 2px 2px #cccccc; border-radius:9px;background:#495391;overflow:hidden;color:#fff; ">
+          <div style="background:#178d27;height: 80px;text-align:center;">
+            <div id="subheader">Payment</div>
+            <!--<img src="images/order_form.png" style="margin-top: 10%;"/>-->
+            </div>
+            <!-----------oredre page start------------->
+           <div class="" style="width:95% !important; float:left; margin-left:15px">
+              
+			  <div class="table-head">New payment options are currently under development.<br> Thank you for your patience.<br><br>
+			<input type="button" class="button" value="Continue" name="submit" onClick="location.href='index.php'"/>
+			  </div>
+              <div style="clear:both"></div>
+			  
+			<!--<div class="form-item" style="width:200px; vertical-align:top; margin:50px 0px 0px 20px; float:left;">
+				<strong>Select Payment Method:</strong>
+			</div>
+			
+			<!--<div class="form-item" style="width:100px; vertical-align:top; margin:50px 30px 0px 0px; float:left;">
+				<input type="radio" name="payment_method" id="payment_method_1" value="unionpay" checked onClick="$('#unionpay_payment').hide();$('#credit_card_payment').hide();$('#wire_transfer_payment').hide();$('#payment_form').validationEngine('hide');">UnionPay
+			</div>
+			<div class="form-item" style="width:100px; vertical-align:top; margin:50px 30px 0px 0px; float:left;">
+				<input type="radio" name="payment_method" id="payment_method_2" value="wire_transfer" checked onClick="$('#unionpay_payment').hide();$(credit_card_payment).hide();$('#wire_transfer_payment').show();$('#payment_form').validationEngine('hide');">Wire Transfer
+			</div>
+			<div class="form-item" style="width:150px; vertical-align:top; margin:50px 30px 0px 0px; float:left;">
+				<input type="radio" name="payment_method" id="payment_method_2" value="credit_card" onClick="$('#unionpay_payment').hide();$('#credit_card_payment').show();$('#wire_transfer_payment').hide();$('#payment_form').validationEngine('hide');">Visa/Master Card (Not Currently Available) 
+			</div>
+			
+			<div style="clear:both"></div>
+			<!--<div id="unionpay_payment" style="display:block;margin:20px;">
+			<form name="unionpay_checkout" id="unionpay_checkout"  method="post" action="process_payment.php">
+				<input type="hidden" name="amount" value="<?php echo $_SESSION['amount'] ?>" >
+				<input type="hidden" name="orderRef" value="<?php echo time() ?>">
+				<input type="hidden" name="payMethod" value="CHINAPAY">
+				<div id="result"></div>
+				<input type="submit" class="button" value="Next" name="submit"/>
+			</form>
+			</div>
+			
+			<div id="wire_transfer_payment" style="display:block;margin:20px;">
+				<input type="button" class="button" value="Next" name="submit" onClick="location.href='wire_transfer.php'"/>
+			</div>
+			
+			<div id="credit_card_payment" style="display:none;margin:20px;">
+				<input type="button" class="button" value="Next" name="submit" onClick="location.href='credit_card_payment.php'"/>
+			</div>-->
+	
+            </div>
+          </div>
+          <div class="clr"></div>
+        </div>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+
+<!--end main-->
+
+<!--start footer-->
+
+<div id="footer">
+
+	<?php include_once "footer.php"; ?>
+
+</div>
+
+<!--end footer-->
+
+</div>
+
+
+
+</body>
+
+</html>
+
+<?php ob_flush(); ?>
